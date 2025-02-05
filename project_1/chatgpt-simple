@@ -1,0 +1,24 @@
+import openai
+
+openai.api_key = "sk-###"
+
+completion = openai.chat.completions.create(model="gpt-o3-mini", messages=[{"role": "user", "content": "Give me 3 ideas for apps I could build with openai apis "}])
+print(completion.choices[0].message.content)
+
+''' import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
+)
+
+chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Say this is a test",
+        }
+    ],
+    model="gpt-4o",
+)
+'''
